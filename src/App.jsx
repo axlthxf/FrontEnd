@@ -1,9 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Signup from './Signup'
-import Signin from './Signin'
+import Signup from './pages/Signup'
+import Signin from './pages/Signin'
+import Home from './pages/Home';
 import {
   BrowserRouter,
   Link,
@@ -12,18 +10,19 @@ import {
 } from "react-router-dom";
 
 function App() {
-  return(
+  return (
     <BrowserRouter>
-    <div className="text-black  bg-black bg-opacity-40 bg-[url('https://wallpapers.com/images/hd/netflix-background-gs7hjuwvv2g0e9fj.jpg')} bg-blend-darken  min-h-screen">
-      <Routes>
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
+      <div className=" bg-[url('https://static3.bigstockphoto.com/8/1/1/large1500/118121435.jpg')}  min-h-screen">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<Signin />} />
 
-      </Routes>
-    </div>
+        </Routes>
+      </div>
     </BrowserRouter>
 
-  
+
   )
 }
 
